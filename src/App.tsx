@@ -8,7 +8,7 @@ import Education from "./pages/Education";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/CV">
       <div className="app-container">
         <Navbar />
         <main>

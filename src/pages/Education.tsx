@@ -4,17 +4,17 @@ import "../styles/experience.css";
 export default function Education() {
   const education = [
     {
-      degree: "Master of Technology in Computer Science",
+      degree: "Master of Science and Technology in Computer Science",
       school: "Aalto University",
       dates: "2023 – 2025",
       details: [
         "Specialized in Web Technologies, Applications, and Science.",
-        "Master's Thesis: Automatic Speech Recognition (ASR) technologies,\
-         model fine-tuning, and practical applications.",
+        "Master's Thesis: Centered around Automatic Speech Recognition (ASR) technologies.\
+         Performed ASR model fine-tuning and creation.",
       ],
     },
     {
-      degree: "Bachelor of Science in Computer Science",
+      degree: "Bachelor of Science and Technology in Computer Science",
       school: "Aalto University",
       dates: "2019 – 2023",
       details: [
