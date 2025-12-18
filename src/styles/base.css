@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #f9f9f9;
+  color: #222;
+}
+
+.main-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+  min-height: 100%;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.about-me-section {
+  margin-left: 2%;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.skills-layout {
+  display: flex;
+  align-items: flex-start;
+}
+.skills-section {
+  min-width: 180px;
+}
+.skills-columns {
+  display: flex;
+  gap: 4%;
+}
+.skills-columns ul {
+  list-style: disc inside;
+  margin: 0;
+  padding: 0;
+}
+.skills-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px 18px;
+  margin-top: 12px;
+}
+.skill-pill {
+  background: #f3f5f7;
+  color: #222;
+  border-radius: 18px;
+  padding: 7px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  margin: 0;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.skill-pill:hover {
+  background: #e5e8eb;
+}
+.skills-section h3 {
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.app-container main {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .main-container {
+    max-width: 100%;
+    padding: 16px 4px;
+    border-radius: 0;
+  }
+}
