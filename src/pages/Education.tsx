@@ -27,7 +27,7 @@ export default function Education() {
     <div className="main-container centered">
       <h1>Education</h1>
       <div className="experience-cards">
-        {education.map((edu, idx) => (
+        {education.map((edu) => (
           <div className="experience-card" key={edu.degree + edu.school}>
             <div className="experience-title">{edu.degree}</div>
             <div className="experience-company">{edu.school}</div>
