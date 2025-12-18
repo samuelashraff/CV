@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styles/base.css";
 import "../styles/experience.css";
+import Links from "../components/Links";
 
 export default function Experience() {
   const [expanded, setExpanded] = useState([false, false, false]);
@@ -18,7 +19,7 @@ export default function Experience() {
         "Completed master’s thesis in collaboration with the company, \
         researching state-of-the-art Automatic Speech Recognition (ASR) technologies and their practical applications.",
         "Performed customer data migration from external systems.",
-        "Spearheaded development of automated testing using Robot Framework and JUnit",
+        "Spearheaded development of automated testing using Robot Framework and JUnit.",
       ]
     },
     {
@@ -72,6 +73,7 @@ export default function Experience() {
             </div>
         ))}
         </div>
+        <Links />
     </div>
   );
 }

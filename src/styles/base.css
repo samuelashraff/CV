@@ -39,6 +39,7 @@ body {
 }
 
 .skills-layout {
+  margin-left: 2%;
   display: flex;
   align-items: flex-start;
 }
@@ -78,6 +79,14 @@ body {
 .skills-section h3 {
   text-align: left;
   margin-bottom: 0;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 32px;
 }
 
 .app-container {

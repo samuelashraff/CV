@@ -3,15 +3,21 @@ import "../styles/base.css";
 export default function Skills() {
   const skills = [
     "Java",
+    "React.js",
     "JavaScript",
     "TypeScript",
     "Python",
     "SQL",
-    "React.js",
     "Node.js",
     "Docker",
     "GraphQL",
     "Redis",
+    "PostgreSQL",
+    "MongoDB",
+    "Git",
+    "Linux",
+    "Agile Methodologies",
+    "SPARQL",
   ];
   return (
     <section className="skills-section">

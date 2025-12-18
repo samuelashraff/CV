@@ -1,3 +1,4 @@
+import Links from "../components/Links";
 import "../styles/base.css";
 import "../styles/experience.css";
 
@@ -40,6 +41,7 @@ export default function Education() {
           </div>
         ))}
       </div>
+      <Links />
     </div>
   );
 }
