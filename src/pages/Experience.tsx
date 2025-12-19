@@ -41,10 +41,13 @@ export default function Experience() {
       ]
     },
   ];
-  const toggle = (idx: number) =>
+
+  const toggle = (idx: number) => {
     setExpanded((e) =>
       e.map((v, i) => (i === idx ? !v : v))
     );
+  }
+
   return (
     <div className="main-container centered">
         <h1>Experience</h1>
@@ -52,21 +55,26 @@ export default function Experience() {
         {experiences.map((exp, idx) => (
             <div className="experience-card" key={exp.title + exp.company}>
             <div className="experience-title">{exp.title}</div>
-            <div className="experience-company">{exp.company}</div>
-            <div className="experience-dates">{exp.dates}</div>
+            <div className="experience-meta">
+              <div className="experience-company">{exp.company}</div>
+              <div className="experience-dates">{exp.dates}</div>
+            </div>
             <div
                 className={`experience-content${
                 expanded[idx] ? " expanded" : ""
                 }`}
             >
-                {Array.isArray(exp.content)
-                    ? exp.content.map((item, i) => <p key={i}>{item}</p>)
-                    : <p>{exp.content}</p>
-                }
+                <ul>
+                  {Array.isArray(exp.content)
+                      ? exp.content.map((item, i) => <li key={i}>{item}</li>)
+                      : <li>{exp.content}</li>
+                  }
+                </ul>
             </div>
             <button
-                className="experience-toggle"
-                onClick={() => toggle(idx)}
+              className="experience-toggle"
+              aria-expanded={expanded[idx]}
+              onClick={() => toggle(idx)}
             >
                 {expanded[idx] ? "Show less" : "Show more"}
             </button>
