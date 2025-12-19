@@ -87,7 +87,6 @@
   line-height: 1.6;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   max-height: 3.5em;
   opacity: 0.85;
@@ -100,7 +99,6 @@
 }
 
 .experience-content.expanded {
-  -webkit-line-clamp: unset;
   max-height: 1000px;
   opacity: 1;
 }
