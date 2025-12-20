@@ -9,7 +9,9 @@ export default function Contact() {
       <p className="contact-intro">
         If you found my profile interesting, don't hesitate to reach out! I'm always open to discussing new opportunities, collaborations, 
         or just connecting with like-minded professionals.
-        Feel free to reach out to me through the following contact details:
+      </p>
+      <p className="contact-intro">
+        Feel free to reach out to me via the following contact details:
       </p>
       <div className="contact-info">
         <div className="contact-item">

@@ -60,9 +60,9 @@ export default function Experience() {
               <div className="experience-dates">{exp.dates}</div>
             </div>
             <div
-                className={`experience-content${
-                expanded[idx] ? " expanded" : ""
-                }`}
+              className={`experience-content ${
+                idx === 0 ? "collapsible" : ""
+              }${expanded[idx] ? " expanded" : ""}`}
             >
                 <ul>
                   {Array.isArray(exp.content)
@@ -71,13 +71,14 @@ export default function Experience() {
                   }
                 </ul>
             </div>
-            <button
-              className="experience-toggle"
-              aria-expanded={expanded[idx]}
-              onClick={() => toggle(idx)}
-            >
+            {idx === 0 && (
+              <button
+                className="experience-toggle"
+                onClick={() => toggle(idx)}
+              >
                 {expanded[idx] ? "Show less" : "Show more"}
-            </button>
+              </button>
+            )}
             </div>
         ))}
         </div>
