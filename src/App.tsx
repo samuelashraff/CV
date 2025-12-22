@@ -11,7 +11,7 @@ import Contact from "./pages/Contact";
 
 export default function App() {
   return (
-    <BrowserRouter basename="/CV">
+    <BrowserRouter basename="/Profile">
       <div className="app-container">
         <Navbar />
         <main>
