@@ -1,10 +1,16 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/base.css";
 import "../styles/experience.css";
 import Links from "../components/Links";
 
 export default function Experience() {
   const [expanded, setExpanded] = useState([false, false, false]);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(true);
+  });
+
   const experiences = [
     {
       title: "Software Developer",
@@ -49,7 +55,7 @@ export default function Experience() {
   }
 
   return (
-    <div className="main-container centered">
+    <div className={`main-container centered page-enter ${visible ? "visible" : ""}`}>
         <h1>Experience</h1>
         <div className="experience-cards">
         {experiences.map((exp, idx) => (
@@ -82,7 +88,9 @@ export default function Experience() {
             </div>
         ))}
         </div>
-        <Links />
+        <div className="stagger">
+          <Links />
+        </div>
     </div>
   );
 }

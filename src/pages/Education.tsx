@@ -1,8 +1,15 @@
+import { useEffect, useState } from "react";
 import Links from "../components/Links";
 import "../styles/base.css";
 import "../styles/experience.css";
 
 export default function Education() {
+  const [visible, setVisible] = useState(false);
+  
+  useEffect(() => {
+    setVisible(true);
+  });
+
   const education = [
     {
       degree: "Master of Science and Technology in Computer Science",
@@ -25,7 +32,7 @@ export default function Education() {
     },
   ];
   return (
-    <div className="main-container centered">
+    <div className={`main-container centered page-enter ${visible ? "visible" : ""}`}>
       <h1>Education</h1>
       <div className="experience-cards">
         {education.map((edu) => (
@@ -41,7 +48,9 @@ export default function Education() {
           </div>
         ))}
       </div>
-      <Links />
+      <div className="stagger">
+        <Links />
+      </div>
     </div>
   );
 }
